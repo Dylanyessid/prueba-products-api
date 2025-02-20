@@ -2,6 +2,8 @@ import { Request, Response, Router } from "express";
 import { getAllProducts } from "../controllers/products.controller";
 import { createSpecialPrice, getAllSpecialPrices, getByUser } from "../controllers/specialPrices.controller";
 
+
+//Endpoints de Precios especiales
 const router = Router()
 
 router.get('/', (req:Request, res:Response)=>{

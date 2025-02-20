@@ -2,6 +2,7 @@ import { Request, Response } from "express"
 import SpecialPrice from "../models/SpecialPrice"
 import { createErrorResponse, createSucessResponse } from "../utils/ResponseMaker"
 
+//Método para obtener los productos con precios especiales
 export const getAllSpecialPrices = async (req:Request, res:Response) =>{
     try {
         const specialPrices = await SpecialPrice.find().lean()
@@ -15,7 +16,7 @@ export const getAllSpecialPrices = async (req:Request, res:Response) =>{
         return res.status(500).json(response)
     }
 }
-
+//Método para obtener los productos con precios especiales por usuario
 export const getByUser = async (req:Request, res:Response) => {
     try {
         const {user} = req.params
@@ -39,6 +40,7 @@ export const getByUser = async (req:Request, res:Response) => {
     }
 }
 
+//Método para crear los  precios especiales
 export const createSpecialPrice = async (req:Request, res:Response) => {
     try {
         const {user, product, newPrice} = req.body

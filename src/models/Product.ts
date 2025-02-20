@@ -1,4 +1,6 @@
 
+//Esquema de Productos en Mongoose , el cual es un ODM para MongoDB y usarlo en Node usando POO
+
 import mongoose, {  Schema } from "mongoose";
 
 const ProductSchema:Schema = new Schema({
